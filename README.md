@@ -6,7 +6,7 @@
 
 # Fidelize
 
-## Equipe Rocket
+## Projeto 4 | Equipe Rocket
 
 ## Integrantes:  
 - [Gustavo de Souza Castro](https://www.linkedin.com/in/gustavocastro01/)
@@ -42,6 +42,7 @@ Há 3 pastas que seguem da seguinte forma:
 
 
 ## 📋 Pré-requisitos
+
 
 ## 🖼 Figma do projeto
 
