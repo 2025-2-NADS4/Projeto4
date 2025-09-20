@@ -6,7 +6,7 @@
 
 # Fidelize
 
-## Projeto 4 | Equipe Rocket
+## Projeto 4 | Equipe Rocket 🚀
 
 ## Integrantes:  
 - [Gustavo de Souza Castro](https://www.linkedin.com/in/gustavocastro01/)
