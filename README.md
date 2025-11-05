@@ -23,8 +23,21 @@
 
 ## Descrição
 
-<p align="center">
+  <p align="center">
+  <img src="https://i.imgur.com/dz2YAVL.png" alt="Fidelize" border="0">
+  
   <br></br>
+  Fidelize é um projeto acadêmico desenvolvido por alunos do Grupo 4 do curso de Análise e Desenvolvimento de Sistemas (ADS) da FECAP, no 4º semestre de 2025, em parceria com a startup foodtech Cannoli. O projeto tem como objetivo criar um dashboard interativo, responsivo e inteligente voltado à análise de dados operacionais e estratégicos da plataforma Cannoli.
+<br></br>
+A proposta do Fidelize é unir tecnologia e gestão de relacionamento para melhorar a experiência de administradores e parceiros comerciais, como restaurantes e negócios integrados à plataforma.
+<br></br>
+Com o dashboard Fidelize, os usuários poderão:
+
+- Visualizar métricas de desempenho e indicadores estratégicos de forma clara e dinâmica.
+- Acompanhar o engajamento de clientes e resultados de campanhas de fidelização.
+- Gerenciar campanhas, pedidos e interações em tempo real, com foco em eficiência operacional.
+- Tomar decisões baseadas em dados, com painéis personalizados e intuitivos.
+- Assim, o Fidelize reforça o propósito central da Cannoli: fidelizar clientes por meio da inteligência de dados, oferecendo uma solução tecnológica moderna, acessível e alinhada às necessidades do mercado de foodtech.
 
 ## 🛠 Estrutura de pastas
 
