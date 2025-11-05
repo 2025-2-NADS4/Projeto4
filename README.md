@@ -4,6 +4,8 @@
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
+---
+
 # Fidelize
 
 ## Projeto 4 | Equipe Rocket 🚀
@@ -54,6 +56,7 @@ Há 3 pastas que seguem da seguinte forma:
 ## 🖥 Tecnologias utilizadas 
 
 
+
 ## 📋 Pré-requisitos
 
 
@@ -75,4 +78,7 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 Aqui estão as referências usadas no projeto.
 
-1.
+1. [Cannoli Foodtech](https://www.cannoli.food/)
+2. [Streamlit](https://streamlit.io/)
+3. [Google Colab](https://colab.google/)
+   
