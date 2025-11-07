@@ -54,7 +54,7 @@ Há 3 pastas que seguem da seguinte forma:
 <b>src</b>: Pasta que contém o código fonte.
 
 ## 🖥 Tecnologias utilizadas 
-
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 
 
 ## 📋 Pré-requisitos
