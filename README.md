@@ -67,7 +67,7 @@ O núcleo do projeto é construído em Python, utilizando um ecossistema robusto
 - **Python:** Linguagem principal para todo o projeto.
 - **Dash (Plotly):** Framework principal para a construção do dashboard web interativo.
 - **Plotly Express:** Biblioteca de alto nível para a criação dos gráficos interativos.
-- **Pandas:** Ferramenta essencial para a limpeza, tratamento (ETL) e análise dos dados.
+- **Pandas:** Ferramenta essencial para a limpeza, tratamento e análise dos dados.
 - **Matplotlib:** Usada na fase de Análise Exploratória de Dados (AED) inicial.
 - **Google Colab/Jupyter:** Utilizado para a prototipação e validação das análises.
 
