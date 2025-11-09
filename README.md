@@ -53,8 +53,23 @@ Há 3 pastas que seguem da seguinte forma:
 
 <b>src</b>: Pasta que contém o código fonte.
 
-## 🖥 Tecnologias utilizadas 
+## 🖥 Tecnologias Utilizadas
+
+O núcleo do projeto é construído em Python, utilizando um ecossistema robusto para análise e visualização de dados:
+
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)
+![Dash](https://img.shields.io/badge/Dash-Plotly-blue?logo=plotly)
+![Plotly Express](https://img.shields.io/badge/Plotly_Express-blue?logo=plotly&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-blue?logo=pandas&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-blue?logo=matplotlib)
+![Jupyter](https://img.shields.io/badge/Jupyter-Colab-orange?logo=jupyter)
+
+- **Python:** Linguagem principal para todo o projeto.
+- **Dash (Plotly):** Framework principal para a construção do dashboard web interativo.
+- **Plotly Express:** Biblioteca de alto nível para a criação dos gráficos interativos.
+- **Pandas:** Ferramenta essencial para a limpeza, tratamento (ETL) e análise dos dados.
+- **Matplotlib:** Usada na fase de Análise Exploratória de Dados (AED) inicial.
+- **Google Colab/Jupyter:** Utilizado para a prototipação e validação das análises.
 
 
 ## 📋 Pré-requisitos
