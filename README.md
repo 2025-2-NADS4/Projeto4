@@ -88,6 +88,86 @@ O projeto foi desenvolvido em Python e utiliza bibliotecas específicas para an�
 
 ## 🛠 Instalação e Configuração
 
+O Fidelize é um projeto acadêmico desenvolvido em Python, voltado à análise e visualização interativa de dados da plataforma Cannoli, uma startup foodtech. O sistema utiliza Dash (Plotly) para criar um dashboard web responsivo e dinâmico, permitindo que administradores e parceiros da Cannoli explorem indicadores operacionais, campanhas e comportamento de clientes.
+
+### 1. Estrutura e diretório do projeto
+
+Após clonar o repositório do Fidelize a partir do GitHub, verifique a estrutura inicial do diretório:
+
+```bash
+|--> fidelize
+ |--> src
+  |--> data/                # arquivos CSV de origem (bases utilizadas no dashboard)
+  |--> documento/           # documentação e relatórios do projeto
+  |--> imagens/             # recursos visuais utilizados
+  |--> src/                 # código-fonte principal 
+ requirements.txt
+ README.md
+```
+Esses arquivos representam os dados de campanhas, clientes e pedidos utilizados para alimentar os gráficos e relatórios interativos do projeto.
+
+### 2. Configuração do ambiente python
+
+O projeto utiliza Python 3.10+ e as principais bibliotecas científicas para tratamento e visualização de dados.
+Antes de rodar o dashboard, configure o ambiente conforme abaixo:
+
+```bash
+python --version
+pip install --upgrade pip
+```
+
+Em um ambiente virtual, instale as dependências do projeto:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Execução em Jupyter Notebook ou Google Colab
+
+Durante o desenvolvimento, parte das análises do Fidelize (como segmentação, funil de campanhas e coortes) pode ser visualizada em notebooks Jupyter caso a execução seja local.
+
+```bash
+jupyter notebook
+```
+Com a execução no Google Colab, segue: upload de notebooks localizados em src/ e execução das células sequencialmente.
+
+### 4. Inicializando o dashboard
+
+A aplicação web está centralizada dentro da pasta src/, onde se encontra o arquivo principal.
+Esse script faz a leitura dos dados, aplica os tratamentos necessários e gera as visualizações dinâmicas por meio do Dash.
+
+```bash
+cd src
+python app.py
+```
+E o terminal exibirá algo como:
+```bash
+Dash is running on http://127.0.0.1:8050/
+```
+Esse enderço dará acesso ao dashboard interativo.
+
+### 5. Configuração dos dados
+
+Os arquivos de dados utilizados no projeto devem estar presentes em data/:
+```bash
+data/
+ ├── CampaignQueue.csv
+ ├── Campaign.csv
+ ├── Customer.csv
+ └── Order.csv
+```
+Esses arquivos são responsáveis por alimentar os gráficos e métricas do dashboard.
+
+### 6. Hospedagem via GitHub
+
+Como o Fidelize é um projeto em Python, o GitHub serve como repositório de código e documentação, e não executa o dashboard interativo diretamente.
+Ainda assim, é possível hospedar o projeto e permitir que outros usuários o executem localmente.
+
+```bash
+python src/app.py
+```
+
+Com isso, o projeto é executado localmente e disponibilizado.
 
 ## 📋 Licença/License
 
@@ -98,6 +178,6 @@ O projeto foi desenvolvido em Python e utiliza bibliotecas específicas para an�
 Aqui estão as referências usadas no projeto.
 
 1. [Cannoli Foodtech](https://www.cannoli.food/)
-2. [Streamlit](https://streamlit.io/)
+2. [Dash](https://plotly.com/dash/)
 3. [Google Colab](https://colab.google/)
    
