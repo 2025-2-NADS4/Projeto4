@@ -74,16 +74,20 @@ O núcleo do projeto é construído em Python, utilizando um ecossistema robusto
 
 ## 📋 Pré-requisitos
 
+Antes de iniciar a execução do Fidelize, é importante garantir que o ambiente de desenvolvimento esteja configurado com as ferramentas e dependências adequadas.
+O projeto foi desenvolvido em Python e utiliza bibliotecas específicas para análise de dados, visualização interativa e execução de notebooks.
 
-## 🖼 Figma do projeto
+- [Python 3.10+](https://www.python.org/downloads/), a linguagem principal do projeto, usada para análise, tratamento de dados e execução do dashboard interativo..
+- Um banco de dados PostgreSQL:
+  - Caso utilize localmente, baixe e instale o [PostgreSQL](https://www.postgresql.org/download/).
+  - Caso utilize um banco online, tenha as credenciais de acesso configuradas.
+- [Pip](https://pip.pypa.io/en/stable/), o gerenciador de pacotes do Python, utilizado para instalar todas as dependências listadas em requirements.txt..
+- Um editor de código como [VSCode](https://code.visualstudio.com/) (opcional, mas recomendado para editar o backend).
+- [Git](https://git-scm.com/) para clonar o repositório do projeto e gerenciar versões do código.
+- O dashboard é alimentado pelos seguintes arquivos .csv, que devem estar presentes na pasta src/data/: CampaignQueue.csv, Campaign.csv, Customer.csv, Order.csv.
 
+## 🛠 Instalação e Configuração
 
-## 🗃 Histórico de lançamentos
-A cada atualização os detalhes devem ser lançados aqui.
-* 0.1.1 - 12/02/2025.
-  * Crazy Eights realizado. 
-* 0.1.0 - 10/02/2025.
-  * Início do projeto. 
 
 ## 📋 Licença/License
 
