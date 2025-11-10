@@ -39,7 +39,8 @@ Com o dashboard Fidelize, os usuários poderão:
 - Acompanhar o engajamento de clientes e resultados de campanhas de fidelização.
 - Gerenciar campanhas, pedidos e interações em tempo real, com foco em eficiência operacional.
 - Tomar decisões baseadas em dados, com painéis personalizados e intuitivos.
-- Assim, o Fidelize reforça o propósito central da Cannoli: fidelizar clientes por meio da inteligência de dados, oferecendo uma solução tecnológica moderna, acessível e alinhada às necessidades do mercado de foodtech.
+
+Assim, o Fidelize reforça o propósito central da Cannoli: fidelizar clientes por meio da inteligência de dados, oferecendo uma solução tecnológica moderna, acessível e alinhada às necessidades do mercado de foodtech.
 
 ## 🛠 Estrutura de pastas
 
