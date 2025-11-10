@@ -98,10 +98,9 @@ Após clonar o repositório do Fidelize a partir do GitHub, verifique a estrutur
 ```bash
 |--> fidelize
  |--> src
-  |--> data/                # arquivos CSV de origem (bases utilizadas no dashboard)
   |--> documento/           # documentação e relatórios do projeto
   |--> imagens/             # recursos visuais utilizados
-  |--> src/                 # código-fonte principal 
+  |--> src/                 # código-fonte principal, arquivos CSV e notebooks colab
  requirements.txt
  README.md
 ```
@@ -149,7 +148,7 @@ Esse enderço dará acesso ao dashboard interativo.
 
 ### 5. Configuração dos dados
 
-Os arquivos de dados utilizados no projeto devem estar presentes em data/:
+Os arquivos de dados utilizados no projeto devem estar presentes em src/:
 ```bash
 data/
  ├── CampaignQueue.csv
