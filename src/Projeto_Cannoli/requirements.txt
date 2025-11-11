@@ -1,0 +1,9 @@
+pandas
+dash
+plotly
+scikit-learn
+supabase
+python-dotenv
+flask
+gunicorn             # <--- NOVO
+psycopg2-binary      # <--- NOVO (Para conexão PostgreSQL)

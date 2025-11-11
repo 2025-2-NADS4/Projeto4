@@ -1,0 +1,6 @@
+id;segmentId;templateId;storeId;name;description;badge;type;status;isDefault;createdAt;createdBy;updatedAt;updatedBy
+1;100;100;CANNOLI_STORE_01;Campanha de Verão 2024;Campanha genérica pré-Cannoli para atrair clientes no verão.;seasonal;2;4;False;2024-01-15T10:00:00Z;admin_fecap;2024-01-15T10:00:00Z;admin_fecap
+2;101;101;CANNOLI_STORE_01;Lançamento Plataforma Cannoli;Anunciando nosso novo app e canal de WhatsApp!;launch;1;4;False;2025-01-05T09:00:00Z;admin_cannoli;2025-01-05T09:00:00Z;admin_cannoli
+3;102;102;CANNOLI_STORE_01;Campanha de Reativação (Março);Sentimos sua falta! Volte e ganhe 10% OFF.;winback;1;4;False;2025-02-25T14:00:00Z;admin_cannoli;2025-02-25T14:00:00Z;admin_cannoli
+4;103;103;CANNOLI_STORE_01;Especial Dia das Mães;Pedidos em família ganham sobremesa grátis.;seasonal;2;4;False;2025-05-01T10:00:00Z;admin_cannoli;2025-05-01T10:00:00Z;admin_cannoli
+5;104;104;CANNOLI_STORE_01;Fidelidade 2º Semestre;Para nossos clientes mais leais.;loyalty;1;4;False;2025-07-01T11:00:00Z;admin_cannoli;2025-07-01T11:00:00Z;admin_cannoli

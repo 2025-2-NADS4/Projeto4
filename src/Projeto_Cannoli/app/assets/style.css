@@ -1,0 +1,83 @@
+/* --- Paleta de Cores do Projeto ---
+Verde Principal: #78A28E
+Amarelo Ouro: #FFB300
+Vinho/Castanho: #6C4549
+Laranja: #FD822A
+Verde Claro: #B4E0C3
+*/
+
+/* --- Estilo Global (Dark Mode) --- */
+body {
+    /* MUDANÇA DE FONTE: Prioriza Montserrat, com fallback para sans-serif */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2a2a2a; 
+    margin: 0;
+    padding: 0;
+    color: #ffffff; 
+}
+
+/* --- Header Principal --- */
+.dashboard-header {
+    background-color: #6C4549; 
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* --- Contentor Principal do Conteúdo --- */
+.dashboard-content {
+    padding: 20px 30px;
+}
+
+.dashboard-content h2 {
+    color: #ffffff;
+    border-bottom: 2px solid #78A28E; 
+    padding-bottom: 10px;
+}
+
+/* --- Cartões do Dashboard --- */
+.dashboard-card {
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #f0f0f0;
+}
+
+.dashboard-card h3 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+/* --- Estilos de Filtros (Corrigidos) --- */
+.filter-bar {
+    display: flex;
+    gap: 20px;
+}
+
+/* --- Estilos do Botão de Exportação --- */
+.export-button {
+    background-color: #78A28E; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Montserrat', sans-serif; /* Aplica a fonte ao botão */
+}
+
+.export-button:hover {
+    background-color: #B4E0C3; 
+    color: #3a3a3a;
+}
