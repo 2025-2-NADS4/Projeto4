@@ -54,6 +54,31 @@ Há 3 pastas que seguem da seguinte forma:
 
 <b>src</b>: Pasta que contém o código fonte.
 
+## 🔗 URL e Credenciais
+
+Acesse a aplicação de demonstração:
+
+**URL do site:** [fidelize.onrender.com](https://fidelize.onrender.com)
+
+### 🔐 Credenciais de teste
+
+#### Admin
+
+email: admin@cannoli.com
+
+senha: admin
+
+#### Cliente
+
+email: cliente@restaurante.com
+
+senha: cliente
+
+### ☑️ Como usar
+1. Acesse a URL acima.  
+2. Faça login com uma das credenciais de teste conforme sua necessidade (Admin ou Cliente).
+
+
 ## 🖥 Tecnologias Utilizadas
 
 O núcleo do projeto é construído em Python, utilizando um ecossistema robusto para análise e visualização de dados:
