@@ -7,9 +7,9 @@ from io import StringIO
 # Importa o 'app' para registar o callback
 from app.app import app
 
-# (Removemos o 'card_style' daqui)
 
-# Layout do contentor de KPIs
+
+
 layout = html.Div(
     style={
         'display': 'grid',
@@ -58,9 +58,9 @@ def update_kpi_cards_from_store(data, start_date, end_date, channels):
     pedidos_fmt = f"{total_pedidos}"
     ticket_fmt = f"R$ {ticket_medio:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
     
-    # Cria os 3 cartões de KPI, agora usando className
+    
     cards = [
-        # Adiciona a classe 'dashboard-card' e centramos o texto
+        
         html.Div(className='dashboard-card', style={'textAlign': 'center'}, children=[
             html.H3("Receita Total"), 
             html.H2(receita_fmt)
@@ -74,4 +74,5 @@ def update_kpi_cards_from_store(data, start_date, end_date, channels):
             html.H2(ticket_fmt)
         ])
     ]
+
     return cards
