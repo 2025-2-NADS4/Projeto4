@@ -5,10 +5,10 @@ import plotly.graph_objects as go
 import pandas as pd
 from io import StringIO
 
-# Importa o 'app' para registar o callback
+
 from app.app import app
 
-HEATMAP_COLORS = ['#B4E0C3', '#78A28E'] # Verde Claro -> Verde Principal
+HEATMAP_COLORS = ['#B4E0C3', '#78A28E'] 
 
 layout = html.Div(
     className='dashboard-card',
@@ -22,7 +22,7 @@ layout = html.Div(
     ]
 )
 
-# CALLBACK: Atualizar o Heatmap
+
 @callback(
     Output('graph-heatmap', 'figure'),
     Input('store-client-data', 'data'),
@@ -50,12 +50,7 @@ def update_heatmap_graph(data, start_date, end_date, channels):
         (df['createdAt'].dt.date <= end_date_obj)
     ]
     
-    # --- CORREÇÃO DO FILTRO (para 'Desconhecido') ---
-    if channels:
-        # Substitui os nulos por 'Desconhecido' ANTES de filtrar
-        df_filtered['salesChannel'] = df_filtered['salesChannel'].fillna('Desconhecido')
-        df_filtered = df_filtered[df_filtered['salesChannel'].isin(channels)]
-    # --- FIM DA CORREÇÃO ---
+
     
     # --- Lógica Específica do Heatmap ---
     df_filtered['dia_semana'] = df_filtered['createdAt'].dt.day_name()
@@ -110,5 +105,6 @@ def update_heatmap_graph(data, start_date, end_date, channels):
         ),
         xaxis=dict(tickmode='linear', dtick=2) 
     )
+
 
     return fig
