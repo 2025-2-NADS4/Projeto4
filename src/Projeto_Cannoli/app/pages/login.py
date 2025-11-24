@@ -49,9 +49,9 @@ layout = html.Div(
                 ),
                 
                 html.Div(id='output-login-error', style={'marginTop': '20px', 'textAlign': 'center', 'color': 'red'}),
-                # dcc.Location(id='login-url', refresh=True), <--- REMOVIDO!
+                
             ]
         ),
     ]
 )
-# (O resto é a lógica de callback no index.py)
+
