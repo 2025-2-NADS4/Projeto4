@@ -8,13 +8,13 @@ from .pages import client_dashboard
 from .pages import admin_dashboard
 from . import auth
 
-# --- O layout principal (igual a antes) ---
+# --- O layout principal ---
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.Div(id='page-content')
 ])
 
-# --- O callback de rotas (MANTIDO) ---
+# --- O callback de rotas ---
 @callback(
     Output('page-content', 'children'),
     [Input('url', 'pathname')]
@@ -45,10 +45,9 @@ def display_page(pathname):
         return login.layout 
 
 
-# --- CALLBACK DE LOGOUT (CORREÇÃO DE OUTPUT) ---
-# Usamos o dcc.Location do layout principal para a saída
+
 @callback(
-    Output('url', 'pathname', allow_duplicate=True), # Saída para o dcc.Location do layout principal
+    Output('url', 'pathname', allow_duplicate=True), 
     Input('button-logout', 'n_clicks'),
     prevent_initial_call=True
 )
@@ -62,10 +61,10 @@ def process_logout(n_clicks):
     # Redireciona para a página de login
     return '/login'
 
-# --- O callback de login (CORRIGIDO PARA USAR O NOVO OUTPUT) ---
+
 @callback(
     Output('output-login-error', 'children'),
-    Output('url', 'pathname'), # <--- AGORA USA O 'url' COMO OUTPUT
+    Output('url', 'pathname'), 
     Input('button-login', 'n_clicks'),
     State('input-email', 'value'),
     State('input-password', 'value'),
@@ -84,4 +83,5 @@ def handle_login(n_clicks, email, password):
         else:
             return message, no_update
             
+
     return no_update, no_update
