@@ -15,7 +15,7 @@ from app.components import admin_simulation_tool
 from app.components import admin_campaign_performance # <--- NOVO
 
 # --- 1. Funções de Busca de Dados ---
-# (Esta função não muda)
+
 def get_admin_data():
     supabase = auth.get_supabase_client()
     if not supabase:
@@ -52,7 +52,7 @@ def get_admin_data():
         print(f"Erro ao buscar dados do Admin: {e}")
         return {}
 
-# --- 3. Layout do Dashboard do Admin (ATUALIZADO) ---
+# --- 3. Layout do Dashboard do Admin ---
 layout = html.Div(
     className='dashboard-container',
     children=[
@@ -65,8 +65,8 @@ layout = html.Div(
                 html.Button(
                     "Logout",
                     id='button-logout',
-                    className='export-button', # Reutiliza o estilo do botão de export
-                    style={'marginLeft': 'auto'} # Empurra o botão para a direita
+                    className='export-button', 
+                    style={'marginLeft': 'auto'} 
                 )
             ]
         ),
@@ -77,7 +77,7 @@ layout = html.Div(
                 
                 html.H2("Visão Geral da Plataforma"),
                 
-                # --- Filtros Reais ---
+                
                 html.Div(
                     className='filter-bar dashboard-card', 
                     children=[
@@ -100,7 +100,7 @@ layout = html.Div(
                 
                 admin_kpi_cards.layout,
 
-                # --- Contentor de Abas ---
+               
                 html.Div(
                     className='TabsContainer',
                     children=[
@@ -109,7 +109,7 @@ layout = html.Div(
                             value='tab-campaigns',
                             children=[
                                 
-                                # --- Aba 1: Desempenho (ATUALIZADA) ---
+                                # --- Aba 1: Desempenho  ---
                                 dcc.Tab(
                                     label='Desempenho de Campanhas', 
                                     value='tab-campaigns',
@@ -128,7 +128,7 @@ layout = html.Div(
                                                     ]
                                                 ),
                                                 # Novo Gráfico (abaixo da grelha)
-                                                admin_campaign_performance.layout # <--- ADICIONADO
+                                                admin_campaign_performance.layout 
                                             ]
                                         )
                                     ]
@@ -163,7 +163,7 @@ layout = html.Div(
 )
 
 # --- 4. Callbacks (Callback de carregamento e filtros) ---
-# (Estes callbacks não mudam)
+
 @callback(
     Output('store-admin-data', 'data'),
     Input('url', 'pathname') 
@@ -197,5 +197,6 @@ def populate_admin_filters(data):
     
     all_stores = df_campaigns['storeId'].fillna('Loja Desconhecida').unique()
     store_options = [{'label': store, 'value': store} for store in all_stores]
+
 
     return min_date, max_date, min_date, max_date, store_options
