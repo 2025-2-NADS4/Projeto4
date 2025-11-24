@@ -10,12 +10,12 @@ from io import StringIO
 # Importa o 'app' para registar o callback
 from app.app import app
 
-# A sua paleta de cores
+
 PROJECT_COLORS = ['#78A28E', '#FFB300', '#6C4549', '#FD822A', '#B4E0C3']
 
-# Layout, agora usa className
+
 layout = html.Div(
-    className='dashboard-card', # <--- USA A CLASSE
+    className='dashboard-card', 
     children=[
         html.H3("Receita Mensal por Canal"),
         dcc.Loading(
@@ -68,7 +68,7 @@ def update_revenue_graph_from_store(data, start_date, end_date, channels):
         x='createdAt_str',
         y='totalAmount',
         color='salesChannel',
-        color_discrete_sequence=PROJECT_COLORS, # Usa a paleta
+        color_discrete_sequence=PROJECT_COLORS, 
         markers=True,
         title="Receita Mensal por Canal (Filtrada)"
     )
@@ -80,7 +80,7 @@ def update_revenue_graph_from_store(data, start_date, end_date, channels):
         fig.add_shape(
             type="line", x0=data_contratacao_str, y0=0,
             x1=data_contratacao_str, y1=max_revenue,
-            line=dict(color="#FD822A", width=2, dash="dash") # Laranja da paleta
+            line=dict(color="#FD822A", width=2, dash="dash") 
         )
         fig.add_annotation(
             x=data_contratacao_str, y=max_revenue,
@@ -88,15 +88,16 @@ def update_revenue_graph_from_store(data, start_date, end_date, channels):
             arrowhead=1, yshift=10, font=dict(color="#FD822A")
         )
     
-    # --- MUDANÇA PARA TEMA ESCURO ---
+   
     fig.update_layout(
         xaxis_title="Mês (Ano-Mês)",
         yaxis_title="Receita Total (R$)",
-        template="plotly_dark", # <--- USA O TEMPLO ESCURO
-        paper_bgcolor='rgba(0,0,0,0)', # Fundo do papel transparente
-        plot_bgcolor='rgba(0,0,0,0)',  # Fundo do gráfico transparente
-        font_color='#f0f0f0', # Cor da fonte clara
+        template="plotly_dark", 
+        paper_bgcolor='rgba(0,0,0,0)', 
+        plot_bgcolor='rgba(0,0,0,0)',  
+        font_color='#f0f0f0', 
         hovermode="x unified"
     )
     
+
     return fig
