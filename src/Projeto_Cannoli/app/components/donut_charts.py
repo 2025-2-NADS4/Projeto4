@@ -10,7 +10,7 @@ from datetime import datetime
 # Importa o 'app' para registar os callbacks
 from app.app import app
 
-# --- A SUA PALETA DE CORES ---
+
 COLORS_ORDER_TYPE = {
     'DELIVERY': '#FFB300', 
     'INDOOR': '#FD822A',   
@@ -21,7 +21,7 @@ COLORS_ROI = {
     'Orgânico': '#6C4549'          
 }
 
-# Layout (Container) - (igual a antes)
+# Layout (Container)
 layout = html.Div(
     className='dashboard-grid-2-col',
     children=[
@@ -50,7 +50,7 @@ layout = html.Div(
     ]
 )
 
-# --- Funções de Filtragem (ATUALIZADA) ---
+# --- Funções de Filtragem ---
 def filter_data(data, start_date, end_date, channels):
     """Função helper que aplica os filtros globais."""
     if not data or 'orders' not in data:
@@ -68,9 +68,9 @@ def filter_data(data, start_date, end_date, channels):
         (df['createdAt'].dt.date <= end_date_obj)
     ]
     
-    # Se o DataFrame estiver VAZIO após o filtro de data, retorna-o
+    # 
     if df_filtered.empty:
-        return df_filtered.copy() # Retorna um DF vazio, mas com as colunas originais
+        return df_filtered.copy() 
 
     # 2. Aplicar filtro de Canal
     df_filtered['salesChannel'] = df_filtered['salesChannel'].fillna('PDV')
@@ -176,4 +176,5 @@ def update_donut_roi(data, start_date, end_date, channels):
         legend_title_text='Origem do Pedido'
     )
     
+
     return fig
