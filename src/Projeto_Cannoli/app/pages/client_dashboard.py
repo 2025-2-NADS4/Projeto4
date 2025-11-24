@@ -16,7 +16,7 @@ from app.components import client_anomaly_alerts
 from app.components import client_acquisition_graph
 from app.components import client_age_graph # <--- NOVO
 
-# --- 1. Funções de Busca de Dados (ATUALIZADA) ---
+# --- 1. Funções de Busca de Dados ---
 def get_data_for_store():
     """
     Busca os dados das tabelas 'orders' E 'customers'
@@ -62,12 +62,12 @@ def get_data_for_store():
         print(f"Erro ao buscar dados (Cliente): {e}")
         return {}
 
-# --- 3. Layout do Dashboard (Atualizado com Grelha na Aba 3) ---
+# --- 3. Layout do Dashboard  ---
 layout = html.Div(
     className='dashboard-container',
     children=[
         
-       # ... (cerca da linha 45) ...
+       
         html.Header(
             className='dashboard-header',
             children=[ 
@@ -76,8 +76,8 @@ layout = html.Div(
                 html.Button(
                     "Logout",
                     id='button-logout',
-                    className='export-button', # Reutiliza o estilo do botão de export
-                    style={'marginLeft': 'auto'} # Empurra o botão para a direita
+                    className='export-button', 
+                    style={'marginLeft': 'auto'} 
                 )
             ]
         ),
@@ -87,7 +87,7 @@ layout = html.Div(
             children=[
                 html.H2("Dashboard do Restaurante"),
                 
-                # Barra de Filtros (não muda)
+                # Barra de Filtros 
                 html.Div(
                     className='filter-bar dashboard-card', 
                     children=[
@@ -102,7 +102,7 @@ layout = html.Div(
                     ]
                 ),
                 
-                # Botão de Exportação (não muda)
+                # Botão de Exportação 
                 html.Div(
                     style={'paddingBottom': '20px', 'textAlign': 'right'},
                     children=[
@@ -115,13 +115,13 @@ layout = html.Div(
                     ]
                 ),
                 
-                # Alertas (não muda)
+                # Alertas 
                 client_anomaly_alerts.layout,
                 
-                # KPIs (não muda)
+                # KPIs 
                 kpi_cards.layout,
                 
-                # --- Contentor de Abas (Aba 3 ATUALIZADA) ---
+                
                 html.Div(
                     className='TabsContainer',
                     children=[
@@ -129,7 +129,7 @@ layout = html.Div(
                             id='dashboard-tabs',
                             value='tab-1',
                             children=[
-                                # Aba 1 (Não muda)
+                                # Aba 1 
                                 dcc.Tab(
                                     label='Visão Geral de Receita', value='tab-1',
                                     className='Tab', selected_className='Tab--selected',
@@ -148,7 +148,7 @@ layout = html.Div(
                                         )
                                     ]
                                 ),
-                                # Aba 2 (Não muda)
+                                # Aba 2 
                                 dcc.Tab(
                                     label='Análise de Pedidos & ROI', value='tab-2',
                                     className='Tab', selected_className='Tab--selected',
@@ -160,7 +160,7 @@ layout = html.Div(
                                     ]
                                 ),
                                 
-                                # --- ABA 3 (ATUALIZADA com Grelha) ---
+                                # --- ABA 3 ---
                                 dcc.Tab(
                                     label='Análise de Clientes', 
                                     value='tab-3',
@@ -170,12 +170,12 @@ layout = html.Div(
                                         html.Div(
                                             className='TabContent',
                                             children=[
-                                                # Usa a grelha de 2 colunas
+                                               
                                                 html.Div(
                                                     className='dashboard-grid-2-col',
                                                     children=[
                                                         client_acquisition_graph.layout,
-                                                        client_age_graph.layout # <--- ADICIONADO
+                                                        client_age_graph.layout 
                                                     ]
                                                 )
                                             ]
@@ -196,16 +196,16 @@ layout = html.Div(
     ]
 )
 
-# --- 4. Callbacks (ATUALIZADOS) ---
+# --- 4. Callbacks  ---
 
-# CALLBACK 1: Carregar dados (ATUALIZADO)
+# CALLBACK 1: Carregar dados 
 @callback(
     Output('store-client-data', 'data'),
     Input('url', 'pathname')
 )
 def load_data_to_store(pathname):
     if pathname == '/client':
-        data_dict = get_data_for_store() # <-- Chama a nova função
+        data_dict = get_data_for_store() 
         if not data_dict:
             return no_update
             
@@ -217,7 +217,7 @@ def load_data_to_store(pathname):
         return json_data # Guarda o dicionário de JSONs
     return no_update
 
-# CALLBACK 2: Popular os filtros (ATUALIZADO)
+# CALLBACK 2: Popular os filtros 
 @callback(
     Output('filter-date-range', 'min_date_allowed'),
     Output('filter-date-range', 'max_date_allowed'),
@@ -227,7 +227,7 @@ def load_data_to_store(pathname):
     Input('store-client-data', 'data')
 )
 def populate_filters(data):
-    # Lê a nova estrutura de dados
+    
     if not data or 'orders' not in data:
         return no_update
 
@@ -277,4 +277,5 @@ def export_csv(n_clicks, data, start_date, end_date, channels):
         "cannoli_export_filtrado.csv",
         sep=';',
         index=False
+
     )
