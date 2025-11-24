@@ -1,8 +1,8 @@
-# app/auth.py (Versão Simples)
+
 import os
 from supabase import create_client, Client
 from dotenv import load_dotenv
-# NENHUMA CLASSE UserMixin ou User aqui
+
 
 # Carrega as variáveis de ambiente
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))
@@ -35,10 +35,11 @@ def sign_in_user(email, password):
             "password": password
         })
         
-        # Determina o papel do utilizador para a sessão
+        
         user_role = 'admin' if session.user.email == "admin@cannoli.com" else 'client'
 
-        return True, "", user_role # Retorna o papel
+        return True, "", user_role 
     
     except Exception as e:
+
         return False, "E-mail ou senha inválidos.", None
